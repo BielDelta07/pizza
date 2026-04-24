@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap);
+
+*{
+  /* Asterisco é para aplicar para toda a página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: JaquesFrancois;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+
+/* Header */
+
+header{
+    position: absolute; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1C1C1C;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* MENU ICON (mobile) */
+
+.menu-toggle span{
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Menu */
+
+.menu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 79%;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
+    transition: 0.4s ease;
+}
+
+.menu a{
+    margin: 15px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu.active{
+    right: 0;
+}
+
+/* Overlay menu */
+
+.overlay-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 900;
+}
+
+.overlay-menu.active{
+    opacity: 1;
+    visibility: visible;
+}
+
